@@ -30,7 +30,7 @@ describe('Testing the book endpoints:', function () {
         description: book.description
       });
       done();
-    });
+    })["catch"](done);
   });
   it('It should not create a book with incomplete parameters', function (done) {
     var book = {
