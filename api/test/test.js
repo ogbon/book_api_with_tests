@@ -6,8 +6,8 @@ import app from '../index';
 chai.use(chatHttp);
 const { expect } = chai;
 
-describe('Testing the book endpoints:', () => {
-  it('It should create a book', (done) => {
+describe('Testing the book endpoints:', function() {
+  it('It should create a book', function(done) {
     const book = {
       title: 'First Awesome book',
       price: '$9.99',
@@ -29,7 +29,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not create a book with incomplete parameters', (done) => {
+  it('It should not create a book with incomplete parameters', function(done) {
     const book = {
       price: '$9.99',
       description: 'This is the awesome book'
@@ -44,7 +44,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should get all books', (done) => {
+  it('It should get all books', function(done) {
     chai.request(app)
       .get('/api/v1/books')
       .set('Accept', 'application/json')
@@ -58,7 +58,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should get a particular book', (done) => {
+  it('It should get a particular book', function(done) {
     const bookId = 1;
     chai.request(app)
       .get(`/api/v1/books/${bookId}`)
@@ -73,7 +73,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not get a particular book with invalid id', (done) => {
+  it('It should not get a particular book with invalid id', function(done) {
     const bookId = 8888;
     chai.request(app)
       .get(`/api/v1/books/${bookId}`)
@@ -85,7 +85,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not get a particular book with non-numeric id', (done) => {
+  it('It should not get a particular book with non-numeric id', function(done) {
     const bookId = 'aaa';
     chai.request(app)
       .get(`/api/v1/books/${bookId}`)
@@ -97,7 +97,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should update a book', (done) => {
+  it('It should update a book', function(done) {
     const bookId = 1;
     const updatedBook = {
       id: bookId,
@@ -119,7 +119,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not update a book with invalid id', (done) => {
+  it('It should not update a book with invalid id', function(done) {
     const bookId = '9999';
     const updatedBook = {
       id: bookId,
@@ -138,7 +138,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not update a book with non-numeric id value', (done) => {
+  it('It should not update a book with non-numeric id value', function(done) {
     const bookId = 'ggg';
     const updatedBook = {
       id: bookId,
@@ -158,7 +158,7 @@ describe('Testing the book endpoints:', () => {
   });
 
 
-  it('It should delete a book', (done) => {
+  it('It should delete a book', function(done) {
     const bookId = 1;
     chai.request(app)
       .delete(`/api/v1/books/${bookId}`)
@@ -170,7 +170,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not delete a book with invalid id', (done) => {
+  it('It should not delete a book with invalid id', function(done) {
     const bookId = 777;
     chai.request(app)
       .delete(`/api/v1/books/${bookId}`)
@@ -182,7 +182,7 @@ describe('Testing the book endpoints:', () => {
       });
   });
 
-  it('It should not delete a book with non-numeric id', (done) => {
+  it('It should not delete a book with non-numeric id', function(done) {
     const bookId = 'bbb';
     chai.request(app)
       .delete(`/api/v1/books/${bookId}`)
