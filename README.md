@@ -1,6 +1,6 @@
 
 Book Application
-
+[![Build Status](https://travis-ci.com/ogbon/book_api_with_tests.svg?branch=master)](https://travis-ci.com/ogbon/book_api_with_tests)
 
 > A Simple Book RestAPI
 
@@ -33,7 +33,7 @@ Book Application
 
 #### Clone
 
-- Clone this project to your local machine `git@github.com:victorsteven/Book-app-NodeJS-PostgreSQL-Travis-Coveralls-Code-Climate.git`
+- Clone this project to your local machine `https://github.com/ogbon/book_api_with_tests.git`
 
 #### Setup
 
