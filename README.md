@@ -1,6 +1,9 @@
-
 Book Application
+
 [![Build Status](https://travis-ci.com/ogbon/book_api_with_tests.svg?branch=master)](https://travis-ci.com/ogbon/book_api_with_tests)
+
+[![Coverage Status](https://coveralls.io/repos/github/ogbon/book_api_with_tests/badge.svg?branch=master)](https://coveralls.io/github/ogbon/book_api_with_tests?branch=master)
+
 
 > A Simple Book RestAPI
 
