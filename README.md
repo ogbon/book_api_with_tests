@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/ogbon/book_api_with_tests.svg?branch=master)](https://travis-ci.com/ogbon/book_api_with_tests)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/74b5e98c6b9ba24614c3/maintainability)](https://codeclimate.com/github/ogbon/book_api_with_tests/maintainability)
+
 > A Simple Book RestAPI
 
 ## Getting Started
